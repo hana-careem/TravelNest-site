@@ -1,0 +1,182 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelNest, Discover breathtaking destinations with curated tours, local insights, and hassle-free planning."/>
+    <meta name="theme-color" content="1c2b3a"/>
+
+    <title>Trip Generator</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css"/>
+
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Travel<span>Nest</span></a>
+
+            <ul class="nav-links" id="navLinks" role="list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="destination.html" class="nav-link">Explore</a></li>
+                <li><a href="budget.html" class="nav-link">Planner</a></li>
+                <li><a href="generator.html" class="nav-link">Trip Generator</a></li>
+                <li><a href="mood.html" class="nav-link">Travel Mood</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+
+    <section class="section-container">
+    <br>
+    <p class="section-eyebrow">Adventure Awaits!</p>
+    <h2 class="section-title">Trip Generator</h2>
+    <p class="section-subtitle">Can't decide where to go? Select your preferences and let our engine pick the perfect match for you!</p>
+
+    <div class="rtg-grid">
+        <div class="rtg-main-panel">
+        
+        <div class="rtg-card form-card">
+            <div class="filter-group-row">
+            <div class="filter-field">
+                <label for="travelType">Travel Style</label>
+                <select id="travelType">
+                <option value="adventure">Adventure</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="cultural">Cultural</option>
+                <option value="nature">Nature</option>
+                </select>
+            </div>
+            
+            <div class="filter-field">
+                <label for="budgetRange">Budget Tier</label>
+                <select id="budgetRange">
+                <option value="low">Low Budget</option>
+                <option value="medium">Medium Budget</option>
+                <option value="high">High/Luxury</option>
+                </select>
+            </div>
+            </div>
+            
+            <button type="button" id="surpriseBtn" class="btn-primary" style="justify-content: center; margin-top: var(--sp-2);">
+            Surprise Me Again!
+            </button>
+        </div>
+
+        <div id="resultCard" class="rtg-card result-card hidden">
+            <div class="result-header">
+            <span id="resultBadge" class="rtg-badge">Tag</span>
+            <h3 id="resultName">Destination Name</h3>
+            </div>
+            <p id="resultDesc" class="result-text">Destination description will populate here dynamically via JavaScript.</p>
+            
+            <button type="button" id="addToWishlistBtn" class="btn-outline" style="width: max-content; gap: var(--sp-2); margin-top: var(--sp-2);">
+            Add to Wishlist
+            </button>
+        </div>
+
+        </div>
+
+        <div class="rtg-card wishlist-card">
+        <h3 style="font-family: var(--font-display); font-size: var(--text-xl); color: var(--clr-dark); margin-bottom: var(--sp-3);">
+            My Travel Wishlist
+        </h3>
+        <div id="wishlistPlaceholder" class="wishlist-empty-state">
+            Your wishlist is empty.
+        </div>
+        <ul id="wishlistList" class="wishlist-items-container">
+            </ul>
+        </div>
+    </div>
+    </section>
+
+
+
+    <footer class="footer" id="footer" role="contentinfo">
+    <div class="footer-grid">
+
+      <!-- Column 1: Brand -->
+      <div class="footer-brand">
+        <p class="footer-logo">Travel<span>Nest</span></p>
+        <p class="footer-tagline">Explore your soul, one destination at a time.</p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+          <a href="#" class="social-btn" aria-label="X / Twitter">𝕏</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Explore links -->
+      <div class="footer-nav-col">
+        <h4 class="footer-heading">Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Explore</a></li>
+          <li><a href="budget.html">Planner</a></li>
+          <li><a href="generator.html">Trip Generator</a></li>
+          <li><a href="mood.html">Travel Mood</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Support links -->
+      <div class="footer-nav-col">
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Newsletter -->
+      <div class="footer-newsletter">
+        <h4 class="footer-heading">Stay in the loop</h4>
+        <p class="footer-newsletter-text">Get weekly travel tips &amp; exclusive deals to your inbox.</p>
+
+        <form class="newsletter-form" id="newsletterForm" novalidate aria-label="Newsletter subscription form">
+          <div class="newsletter-input-group">
+            <!-- sr-only label = visually hidden but accessible to screen readers -->
+            <input
+              type="email"
+              id="emailInput"
+              name="email"
+              placeholder="your@email.com"
+              autocomplete="email"
+              aria-required="true"
+            />
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </div>
+          <!-- JS writes error/success messages here -->
+          <div class="form-feedback" id="formFeedback" role="alert" aria-live="polite"></div>
+        </form>
+
+        <!-- Shows when an email is already saved in localStorage -->
+        <div class="saved-sub" id="savedSub"></div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 TravelNest.</p>
+    </div>
+  </footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelNest, Discover breathtaking destinations with curated tours, local insights, and hassle-free planning."/>
+    <meta name="theme-color" content="1c2b3a"/>
+
+    <title>Travel Mood</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css"/>
+
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Travel<span>Nest</span></a>
+
+            <ul class="nav-links" id="navLinks" role="list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="destination.html" class="nav-link">Explore</a></li>
+                <li><a href="budget.html" class="nav-link">Planner</a></li>
+                <li><a href="generator.html" class="nav-link">Trip Generator</a></li>
+                <li><a href="mood.html" class="nav-link">Travel Mood</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+
+    <section class="section-container mood-page-layout">
+  <div class="section-header">
+    <p class="section-eyebrow">Immersive Experience</p>
+    <h2 class="section-title">Travel Mood & Tracker</h2>
+    <p class="section-subtitle">Set the vibe with ambient soundscapes and keep track of your worldly adventures.</p>
+  </div>
+
+  <div class="mood-grid">
+    
+    <div class="mood-card soundscape-card">
+      <h3 class="mood-card-title">Ambient Soundscapes</h3>
+      <p class="mood-card-desc">Click to play background ambiance while you plan.</p>
+      
+      <div class="sound-toggles">
+        <button type="button" class="sound-btn" data-sound="beach" aria-pressed="false">
+          <span class="sound-icon">🌊</span>
+          <span class="sound-label">Ocean Waves</span>
+        </button>
+        
+        <button type="button" class="sound-btn" data-sound="forest" aria-pressed="false">
+          <span class="sound-icon">🌲</span>
+          <span class="sound-label">Deep Forest</span>
+        </button>
+        
+        <button type="button" class="sound-btn" data-sound="city" aria-pressed="false">
+          <span class="sound-icon">🏙️</span>
+          <span class="sound-label">City Bustle</span>
+        </button>
+
+        <button type="button" class="sound-btn" data-sound="rain" aria-pressed="false">
+          <span class="sound-icon">🌧️</span>
+          <span class="sound-label">Rain Shower</span>
+        </button>
+      </div>
+      
+      <audio id="audio-beach" src="assets/beach.mp3" loop preload="none"></audio>
+      <audio id="audio-forest" src="assets/forest.mp3" loop preload="none"></audio>
+      <audio id="audio-city" src="assets/city.mp3" loop preload="none"></audio>
+    </div>
+
+    <div class="mood-card tracker-card">
+      <h3 class="mood-card-title">My Travel Passport</h3>
+      <p class="mood-card-desc">Mark your dream destinations as planned or checked off.</p>
+
+      <div class="tracker-list">
+        
+        <div class="tracker-item" data-destination-id="kyoto">
+          <div class="tracker-info">
+            <span class="tracker-name">Kyoto, Japan</span>
+          </div>
+          <div class="tracker-actions">
+            <label class="tracker-radio">
+              <input type="radio" name="status-kyoto" value="planned" checked>
+              <span class="radio-btn">Planned</span>
+            </label>
+            <label class="tracker-radio">
+              <input type="radio" name="status-kyoto" value="visited">
+              <span class="radio-btn">Visited</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="tracker-item" data-destination-id="santorini">
+          <div class="tracker-info">
+            <span class="tracker-name">Santorini, Greece</span>
+          </div>
+          <div class="tracker-actions">
+            <label class="tracker-radio">
+              <input type="radio" name="status-santorini" value="planned">
+              <span class="radio-btn">Planned</span>
+            </label>
+            <label class="tracker-radio">
+              <input type="radio" name="status-santorini" value="visited" checked>
+              <span class="radio-btn">Visited</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="tracker-item" data-destination-id="banff">
+          <div class="tracker-info">
+            <span class="tracker-name">Banff, Canada</span>
+          </div>
+          <div class="tracker-actions">
+            <label class="tracker-radio">
+              <input type="radio" name="status-banff" value="planned" checked>
+              <span class="radio-btn">Planned</span>
+            </label>
+            <label class="tracker-radio">
+              <input type="radio" name="status-banff" value="visited">
+              <span class="radio-btn">Visited</span>
+            </label>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+    <footer class="footer" id="footer" role="contentinfo">
+    <div class="footer-grid">
+
+      <!-- Column 1: Brand -->
+      <div class="footer-brand">
+        <p class="footer-logo">Travel<span>Nest</span></p>
+        <p class="footer-tagline">Explore your soul, one destination at a time.</p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+          <a href="#" class="social-btn" aria-label="X / Twitter">𝕏</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Explore links -->
+      <div class="footer-nav-col">
+        <h4 class="footer-heading">Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Explore</a></li>
+          <li><a href="budget.html">Planner</a></li>
+          <li><a href="generator.html">Trip Generator</a></li>
+          <li><a href="mood.html">Travel Mood</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Support links -->
+      <div class="footer-nav-col">
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Newsletter -->
+      <div class="footer-newsletter">
+        <h4 class="footer-heading">Stay in the loop</h4>
+        <p class="footer-newsletter-text">Get weekly travel tips &amp; exclusive deals to your inbox.</p>
+
+        <form class="newsletter-form" id="newsletterForm" novalidate aria-label="Newsletter subscription form">
+          <div class="newsletter-input-group">
+            <!-- sr-only label = visually hidden but accessible to screen readers -->
+            <input
+              type="email"
+              id="emailInput"
+              name="email"
+              placeholder="your@email.com"
+              autocomplete="email"
+              aria-required="true"
+            />
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </div>
+          <!-- JS writes error/success messages here -->
+          <div class="form-feedback" id="formFeedback" role="alert" aria-live="polite"></div>
+        </form>
+
+        <!-- Shows when an email is already saved in localStorage -->
+        <div class="saved-sub" id="savedSub"></div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 TravelNest.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+    
+</body>
+</html>

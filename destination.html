@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelNest, Discover breathtaking destinations with curated tours, local insights, and hassle-free planning."/>
+    <meta name="theme-color" content="1c2b3a"/>
+
+    <title>Destination Explorer</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css"/>
+
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Travel<span>Nest</span></a>
+
+            <ul class="nav-links" id="navLinks" role="list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="destination.html" class="nav-link">Explore</a></li>
+                <li><a href="budget.html" class="nav-link">Planner</a></li>
+                <li><a href="generator.html" class="nav-link">Trip Generator</a></li>
+                <li><a href="mood.html" class="nav-link">Travel Mood</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+
+
+    <section class="section-container">
+    <br>
+    <p class="section-eyebrow">Discover New Horizons</p>
+    <h2 class="section-title">Destination Explorer</h2>
+    <p class="section-subtitle">Search, filter, and drill down into incredible global getaways to map out your next adventure itinerary.</p>
+
+    <div class="explorer-toolbar">
+        <div class="search-input-wrapper">
+        <span class="search-icon" aria-hidden="true"></span>
+        <input type="text" id="destSearchInput" placeholder="Search destinations by name..." aria-label="Search destinations by name">
+        </div>
+        
+        <div class="filter-select-wrapper">
+        <label for="continentFilter">Filter:</label>
+        <select id="continentFilter">
+            <option value="all">All Continents</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="africa">Africa</option>
+            <option value="americas">Americas</option>
+            <option value="oceania">Oceania</option>
+        </select>
+        </div>
+    </div>
+
+    <div class="explorer-grid" id="explorerGrid">
+        </div>
+
+    <div id="emptyGridState" class="explorer-empty-state hidden">
+        <p>No destinations match your exact filter combination.</p>
+    </div>
+    </section>
+
+    <div id="destinationModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-wrapper">
+        <button type="button" id="modalCloseBtn" class="modal-close-trigger" aria-label="Close dialog">✕</button>
+        
+        <div class="modal-hero-banner">
+        <img id="modalImg" src="" alt="">
+        <div class="modal-hero-overlay">
+            <span id="modalMetaBadge" class="modal-badge-tag">Continent</span>
+            <h3 id="modalTitle">Destination Name</h3>
+            <p id="modalSubtitle">Country/Region Location</p>
+        </div>
+        </div>
+
+        <div class="modal-body-content">
+        <div class="modal-layout-split">
+            <div class="modal-main-column">
+            <h4 class="modal-section-heading">Overview</h4>
+            <p id="modalDescription" class="modal-text-paragraph">Detailed overview text placeholder...</p>
+            
+            <h4 class="modal-section-heading" style="margin-top: var(--sp-5);">Popular Attractions</h4>
+            <ul id="modalAttractionsList" class="modal-bullet-list">
+                </ul>
+            </div>
+            
+            <div class="modal-side-column">
+            <h4 class="modal-section-heading">Estimated Travel Costs</h4>
+            <p style="font-size: var(--text-xs); color: var(--clr-muted); margin-bottom: var(--sp-3); line-height: 1.4;">
+                Average daily cost baseline tiers computed in standard currencies for planning references.
+            </p>
+            
+            <div class="table-scroll-container">
+                <table class="cost-comparison-table">
+                <thead>
+                    <tr>
+                    <th>Expense Type</th>
+                    <th>Budget Tier</th>
+                    <th>Premium Tier</th>
+                    </tr>
+                </thead>
+                <tbody id="modalCostTableBody">
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <footer class="footer" id="footer" role="contentinfo">
+    <div class="footer-grid">
+
+      <!-- Column 1: Brand -->
+      <div class="footer-brand">
+        <p class="footer-logo">Travel<span>Nest</span></p>
+        <p class="footer-tagline">Explore your soul, one destination at a time.</p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+          <a href="#" class="social-btn" aria-label="X / Twitter">𝕏</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Explore links -->
+      <div class="footer-nav-col">
+        <h4 class="footer-heading">Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Explore</a></li>
+          <li><a href="budget.html">Planner</a></li>
+          <li><a href="generator.html">Trip Generator</a></li>
+          <li><a href="mood.html">Travel Mood</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Support links -->
+      <div class="footer-nav-col">
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Newsletter -->
+      <div class="footer-newsletter">
+        <h4 class="footer-heading">Stay in the loop</h4>
+        <p class="footer-newsletter-text">Get weekly travel tips &amp; exclusive deals to your inbox.</p>
+
+        <form class="newsletter-form" id="newsletterForm" novalidate aria-label="Newsletter subscription form">
+          <div class="newsletter-input-group">
+            <!-- sr-only label = visually hidden but accessible to screen readers -->
+            <input
+              type="email"
+              id="emailInput"
+              name="email"
+              placeholder="your@email.com"
+              autocomplete="email"
+              aria-required="true"
+            />
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </div>
+          <!-- JS writes error/success messages here -->
+          <div class="form-feedback" id="formFeedback" role="alert" aria-live="polite"></div>
+        </form>
+
+        <!-- Shows when an email is already saved in localStorage -->
+        <div class="saved-sub" id="savedSub"></div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 TravelNest.</p>
+    </div>
+  </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

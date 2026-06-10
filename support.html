@@ -1,0 +1,266 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelNest, Discover breathtaking destinations with curated tours, local insights, and hassle-free planning."/>
+    <meta name="theme-color" content="1c2b3a"/>
+
+    <title>Feedback & Support</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css"/>
+
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Travel<span>Nest</span></a>
+
+            <ul class="nav-links" id="navLinks" role="list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="destination.html" class="nav-link">Explore</a></li>
+                <li><a href="budget.html" class="nav-link">Planner</a></li>
+                <li><a href="generator.html" class="nav-link">Trip Generator</a></li>
+                <li><a href="mood.html" class="nav-link">Travel Mood</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header" aria-label="page header">
+  <div class="page-header-inner" aria-label="feedback section">
+    <div class="page-header-text">
+      <div class="section-eyebrow light">✦ Here to help!</div>
+      <h1 class="page-header-title">Feedback &<br/>Support</h1>
+      <p class="page-header-subtitle">
+        Got a question? A suggestion? Something went wrong?
+        Send us a message and we'll get back to you within 24 hours.
+      </p>
+    </div>
+    <div class="page-header-links">
+      <a href="#feedback-section" class="btn-primary">Send a Message</a>
+      <a href="#faq-section" class="btn-outline-light">Browse FAQs</a>
+    </div>
+  </div>
+</header>
+
+<div class="section-container support-page-layout">
+  
+  <section id="feedback-section" class="support-card-wrapper" aria-label="Support Message form">
+    <h2 class="support-card-title">Send us Feedback</h2>
+    <p style="color: var(--clr-text); font-size: var(--text-sm); margin-bottom: var(--sp-4);">
+      Your thoughts help us improve. Fill out the details below to reach our team.
+    </p>
+
+    <div id="submissionSuccessBanner" class="success-alert-box hidden" role="alert">
+      <div class="alert-icon">✓</div>
+      <div>
+        <h4 style="font-size: var(--text-base); font-weight: 700; margin-bottom: 2px;">Thank you!</h4>
+        <p style="font-size: var(--text-xs); margin: 0;">Your message was securely saved. We'll respond shortly.</p>
+      </div>
+    </div>
+
+    <form id="feedbackForm" novalidate autocomplete="off">
+      <div class="form-group-field">
+        <label for="fbName">Full Name</label>
+        <input type="text" id="fbName" placeholder="Your name" required minlength="2">
+        <span class="field-error-msg" id="nameError">Name must contain at least 2 characters.</span>
+      </div>
+
+      <div class="form-group-field">
+        <label for="fbEmail">Email Address</label>
+        <input type="email" id="fbEmail" placeholder="yourname@domain.com" required>
+        <span class="field-error-msg" id="emailError">Please enter a valid email address.</span>
+      </div>
+
+      <div class="form-group-field">
+        <label for="fbMessage">Your Message</label>
+        <textarea id="fbMessage" rows="5" placeholder="Write your suggestion or question here..." required minlength="10"></textarea>
+        <span class="field-error-msg" id="messageError">Message must be at least 10 characters long.</span>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: var(--sp-2);">
+        Submit Message
+      </button>
+    </form>
+  </section>
+
+  <section id="faq-section" class="accordion-container-block" aria-label="FAQ section">
+    <h2 class="support-card-title" style="margin-bottom: var(--sp-4);">Frequently Asked Questions</h2>
+    
+    <div class="accordion-wrapper">
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-1">
+          <span>Can I cancel or modify my booking?</span>
+          <span class="faq-chevron-icon" aria-hidden="true"></span>
+        </button>
+        <div id="faq-ans-1" class="faq-content-panel" role="region">
+          <div class="faq-content-inner">
+            <p>
+              Yes. Cancellations made <strong>14 or more days</strong> before your tour date receive a
+              full refund. Cancellations within 7–13 days receive a 50% refund. Within 7 days,
+              unfortunately no refund is possible but you may reschedule once at no extra cost.
+              To modify dates, contact us via this form or by email.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-2">
+          <span>What is included in a tour package?</span>
+          <span class="faq-chevron-icon" aria-hidden="true"></span>
+        </button>
+        <div id="faq-ans-2" class="faq-content-panel" role="region">
+          <div class="faq-content-inner">
+            <p>
+              Every TravelNest package includes accommodation, a certified local guide, island-hopping
+              or land transfers (as applicable), and daily breakfast. Flights, travel insurance, and personal expenses
+              are not included unless explicitly stated.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-3">
+          <span>What payment methods do you accept?</span>
+          <span class="faq-chevron-icon" aria-hidden="true"></span>
+        </button>
+        <div id="faq-ans-3" class="faq-content-panel" role="region">
+          <div class="faq-content-inner">
+            <p>
+              We accept Visa, Mastercard, GCash, Maya, and bank transfer (BPI and BDO).
+              All transactions are processed securely over HTTPS. We do not store your card details —
+              payments are handled by our payment gateway partner.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-3">
+          <span>Is travel insurance required?</span>
+          <span class="faq-chevron-icon" aria-hidden="true"></span>
+        </button>
+        <div id="faq-ans-3" class="faq-content-panel" role="region">
+          <div class="faq-content-inner">
+            <p>
+              Travel insurance is strongly recommended but not mandatory for domestic Philippine tours.
+              For international packages (if offered), proof of travel insurance is required at
+              check-in. We partner with several insurance providers and can recommend options
+              during the booking process.
+            </p>
+          </div>
+         </div>
+        </div>
+
+        <div class="faq-item">
+        <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-3">
+          <span>Do you offer group or student discounts?</span>
+          <span class="faq-chevron-icon" aria-hidden="true"></span>
+        </button>
+        <div id="faq-ans-3" class="faq-content-panel" role="region">
+          <div class="faq-content-inner">
+            <p>
+              Groups of 8 or more receive a <strong>10% discount</strong> automatically at checkout.
+              Students with a valid ID receive 5% off any package. Both discounts cannot be combined.
+              For corporate or school bookings of 20+ people, contact us directly for a custom quote.
+            </p>
+          </div>
+         </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+</div>
+
+    <footer class="footer" id="footer" role="contentinfo">
+    <div class="footer-grid">
+
+      <!-- Column 1: Brand -->
+      <div class="footer-brand">
+        <p class="footer-logo">Travel<span>Nest</span></p>
+        <p class="footer-tagline">Explore your soul, one destination at a time.</p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+          <a href="#" class="social-btn" aria-label="X / Twitter">𝕏</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Explore links -->
+      <div class="footer-nav-col">
+        <h4 class="footer-heading">Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Explore</a></li>
+          <li><a href="budget.html">Planner</a></li>
+          <li><a href="generator.html">Trip Generator</a></li>
+          <li><a href="mood.html">Travel Mood</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Support links -->
+      <div class="footer-nav-col">
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Newsletter -->
+      <div class="footer-newsletter">
+        <h4 class="footer-heading">Stay in the loop</h4>
+        <p class="footer-newsletter-text">Get weekly travel tips &amp; exclusive deals to your inbox.</p>
+
+        <form class="newsletter-form" id="newsletterForm" novalidate aria-label="Newsletter subscription form">
+          <div class="newsletter-input-group">
+            <!-- sr-only label = visually hidden but accessible to screen readers -->
+            <input
+              type="email"
+              id="emailInput"
+              name="email"
+              placeholder="your@email.com"
+              autocomplete="email"
+              aria-required="true"
+            />
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </div>
+          <!-- JS writes error/success messages here -->
+          <div class="form-feedback" id="formFeedback" role="alert" aria-live="polite"></div>
+        </form>
+
+        <!-- Shows when an email is already saved in localStorage -->
+        <div class="saved-sub" id="savedSub"></div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 TravelNest.</p>
+    </div>
+  </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
