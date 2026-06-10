@@ -255,7 +255,7 @@ const DESTINATIONS_DATA = [
     continent:   "africa",
     highlight:   "Mountains, vineyards, and two oceans meet at the southern tip of the world.",
     description: "Cape Town sits at the meeting point of the Atlantic and Indian Oceans, flanked by the iconic Table Mountain and some of the most dramatic coastline in Africa. The city blends a vibrant food and arts scene with world-class wine regions in Stellenbosch, penguin colonies at Boulders Beach, and the poignant history of Robben Island.",
-    image:       "images/capetown.jpeg",
+    image:       "images/capetown.webp",
     attractions: [
       "Table Mountain National Park",
       "Cape of Good Hope",
@@ -301,7 +301,7 @@ const DESTINATIONS_DATA = [
     continent:   "oceania",
     highlight:   "Opera House sails, harbour sunsets, and beaches within a bus ride of the CBD.",
     description: "Sydney is Australia's largest city and one of the most beautiful harbour cities on Earth. The Sydney Opera House and Harbour Bridge are two of the most recognisable structures in the world, but the city's appeal runs much deeper — from the surf culture of Bondi Beach to the culinary scene of Surry Hills and the ancient Aboriginal heritage of the Blue Mountains.",
-    image:       "images/sydney.jpeg",
+    image:       "images/sydney.jpg",
     attractions: [
       "Sydney Opera House",
       "Sydney Harbour Bridge Climb",
