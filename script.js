@@ -999,7 +999,7 @@ function initScrollReveal() {
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   rotateQuote();
-  setInterval(rotateQuote, 5000);
+  setInterval(rotateQuote, 6500);
   storeEmail();
   faqSection();
   updateDailyDestination();
